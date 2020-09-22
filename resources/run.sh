@@ -1,0 +1,1 @@
+docker-compose down -v && docker-compose up -d && docker-compose exec -T mongodb mongorestore --archive --gzip < backup/toiasv01.agz

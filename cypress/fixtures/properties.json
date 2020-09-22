@@ -1,0 +1,19 @@
+{
+    "url": "http://localhost:8080",
+    "login": "leowaterk@gmail.com",
+    "password": "pass@12345",
+
+    "treino": {
+        "nome": "deadlift automacao",
+        "descricao": " levantamento peso morto",
+        "exercicio": "agachamento aberto",
+        "reps": "5",
+        "series": "3",
+        "ordem": "2"
+    },
+    
+    "exercicio": {
+        "nome": "Canivete",
+        "descricao": "abdominal canivete"
+    }
+}

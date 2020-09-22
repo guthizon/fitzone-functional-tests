@@ -1,0 +1,1 @@
+cd resources && docker-compose down -v && docker-compose up -d && docker-compose exec -T mongodb mongorestore --archive --gzip < backup/toiasv01.agz && cd.. cypress-tags run --browser chrome -e --no-exit TAGS="@local"

@@ -1,0 +1,21 @@
+{
+  "name": "fitzone-functional-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "browser": "./node_modules/.bin/cypress-tags run --browser chrome -e --no-exit TAGS=\"@local\"",
+    "teste": "cypress run --browser chrome --headless -e --env TAGS='@test'"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/steps"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^5.0.0",
+    "cypress-cucumber-preprocessor": "^2.5.5",
+    "cypress-xpath": "^1.6.0"
+  }
+}

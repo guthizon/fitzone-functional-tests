@@ -1,0 +1,9 @@
+version: '3'
+services:
+    mongodb:
+        image: mongo:4.2.3
+        volumes: 
+            - ./backup:/backup
+        ports: 
+            - 27017:27017
+        # command: bash -c "sleep 10 && cd backup && ./restore.sh"
