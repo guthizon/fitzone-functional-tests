@@ -1,2 +1,2 @@
 # fitzone-functional-tests
-Functional tests of the fitzone system
+Functional tests Fitzone Gym Manegement
