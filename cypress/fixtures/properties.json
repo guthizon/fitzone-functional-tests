@@ -1,7 +1,7 @@
 {
     "url": "http://localhost:8080",
-    "login": "leowaterk@gmail.com",
-    "password": "pass@12345",
+    "login": "teste@gmail.com",
+    "password": "11111",
 
     "treino": {
         "nome": "deadlift automacao",
