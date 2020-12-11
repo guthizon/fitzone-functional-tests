@@ -1,9 +1,11 @@
 import ClientesElements from '../elements/clientesPageElements'
 import HomeElements from '../elements/homePageElements'
 import WorkoutElements from '../elements/workoutsPageElements'
+import CommonsPage from './commonsPage'
 
 const elHome = new HomeElements
 const work = new WorkoutElements
+const common = new CommonsPage
 
 class ClientesPage extends ClientesElements {
 
@@ -63,6 +65,14 @@ class ClientesPage extends ClientesElements {
         cy.get(this.telaCadastrarClienteCampoPerfis()).click({force: true});
         cy.xpath(this.telaCadastrarClienteCampoPerfisOpcaoAdmin()).click({force: true});
         cy.get(this.telaCadastrarClienteCampoCelular()).click();
+    }
+
+    nenhumClienteListado() {
+        common.registrosListados("0");
+    }
+
+    clienteNaoListado(cliente) {
+        cy.xpath(this.clienteListado(cliente), { timeout: 1000 }).should('not.exist');
     }
 }
 

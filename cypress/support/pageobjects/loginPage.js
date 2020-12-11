@@ -1,6 +1,8 @@
 import LoginElements from '../elements/loginPageElements'
+import HomeElements from '../elements/homePageElements'
 
 const el = new LoginElements
+const elHome = new HomeElements
 const url = 'http://localhost:8080'
 
 class LoginPage {
@@ -22,8 +24,13 @@ class LoginPage {
     }
 
     acessarPaginaInicial() {
-        cy.xpath(el.telaPrincipalQuadroCheckinsSemana())
-        .should('contain', 'Checkins nos últimos dias').screenshot();
+        cy.get(el.telaPrincipalQuadroCheckinsSemana())
+        .should('is.visible').screenshot();
+    }
+    
+    acessarPaginaInicialAluno() {
+        cy.xpath(el.botaoMeusTreinoTelaPrincipal())
+        .should('is.visible').screenshot();
     }
   
     mensagemValidacao(mensagem) {
@@ -42,6 +49,10 @@ class LoginPage {
             this.clicarBotaoEntrar();
             this.acessarPaginaInicial();
         })
+    }
+    realizarLogout() {
+        cy.get(elHome.botaoMenu()).click();
+        cy.xpath(elHome.acessarItemMenu('Sair')).click();
     }
 
 }

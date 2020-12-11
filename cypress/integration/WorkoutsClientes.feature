@@ -23,7 +23,7 @@ Feature: Cadastro de Clientes - Workouts
         When adiciono o exercício "Agachamento Aberto" ao treino
         When clico em salvar
         Then deve ser exibida a mensagem "Treino cadastrado"
-        And o treino deve ser listado na página de treinos do cliente
+        And o treino "deadlift automacao" deve ser listado na página de treinos do cliente
 
     Scenario: Alterar treino
         And clico no botão para abrir os treinos do cliente "leowaterk"

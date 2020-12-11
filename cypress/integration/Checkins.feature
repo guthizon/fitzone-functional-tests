@@ -9,7 +9,9 @@ Feature: Cadastro de Checkins
     de poder trocar o treino a ser realizado.
 
     Background: Acessar tela de checkins
-        Given que eu esteja na tela de checkins
+        Given que acesso o sistema FitZone
+        And que eu esteja logado
+        When acesso o cadastro de checkins
 
     Scenario: Realizar checkin usuário válido
         When informo o código "2" para fazer o checkin

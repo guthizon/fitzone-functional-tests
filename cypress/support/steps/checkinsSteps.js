@@ -3,8 +3,11 @@ import CheckinsPage from "../pageobjects/checkinsPage";
 
 const checkinsPage = new CheckinsPage
 
-Given('que eu esteja na tela de checkins', () => {
+Given('acesso o cadastro de checkins', () => {
     checkinsPage.acessarCadastroCheckins();
+})
+Given('acesso o cadastro de checkins do aluno', () => {
+    checkinsPage.acessarCadastroCheckinsAluno();
 })
 When('informo o código {string} para fazer o checkin', codigo => {
     checkinsPage.informarCodigoCheckin(codigo);

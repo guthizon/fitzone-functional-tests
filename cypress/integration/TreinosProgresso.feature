@@ -5,11 +5,11 @@ Feature: Tela de treinos em progresso
     desejo poder visualizar meu treino com a descrição dos exercícios a serem realizados
     em uma tela dentro da academia. 
     Esse será o treino dia que eu inciarei após realizar o checkin.
-
+    
     Scenario: Visualizar treino em progresso
         Given que acesso o sistema FitZone
         And que eu esteja logado
-        Given que eu esteja na tela de checkins
+        And acesso o cadastro de checkins
         When informo o código "0205" para fazer o checkin
         And clico no botao iniciar do teclado
         And clico em iniciar

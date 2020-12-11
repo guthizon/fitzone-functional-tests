@@ -27,6 +27,9 @@ And('seleciono a opção {string} no campo Situação', situacao => {
 Then('o cliente {string} deve ser exibido com situação inativo', cliente => {
     clientesPage.exibirClienteInativo(cliente);
 })
+Then('o cliente {string} não deve ser listado', cliente => {
+    clientesPage.clienteNaoListado(cliente);
+})
 And('clico para editar o cliente {string}', cliente => {
     clientesPage.clicarBotaoEditarCliente(cliente);
 })
@@ -38,5 +41,8 @@ And('clico no botão para abrir os treinos do cliente {string}', cliente => {
 })
 When('clico para listar clientes inativos', () => {
     clientesPage.listarInativos();
+})
+Then('nenhum cliente deve ser listado', () => {
+    clientesPage.nenhumClienteListado();
 })
 

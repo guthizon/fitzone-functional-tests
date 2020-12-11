@@ -25,11 +25,13 @@ Feature: Login do sistema
         When informo o login "leowaterk@gmail.co"
         When informo a senha "pass@12345"
         When clico no botão entrar
-        Then deve exibir a mensagem "Email inválido. Verifique e tente novamente."
+        Then deve exibir a mensagem "Usuário ou senha inválido(s). Verifique e tente novamente"
     
     Scenario: Acessar com Senha inválida
         Given que acesso o sistema FitZone
         When informo o login "leowaterk@gmail.com"
         When informo a senha "pass@123455"
         And clico no botão entrar
-        Then deve exibir a mensagem "A senha informada está incorreta."
+        Then deve exibir a mensagem "Usuário ou senha inválido(s). Verifique e tente novamente"
+
+    Scenario: Alterar Senha
