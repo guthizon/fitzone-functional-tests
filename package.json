@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "browser": "./node_modules/.bin/cypress-tags run --browser chrome -e --no-exit TAGS=\"@local\"",
-    "teste": "cypress run --browser chrome --headless -e --env TAGS='@test'"
+    "browser": "./node_modules/.bin/cypress-tags run --browser chrome -e --no-exit TAGS=\"@test\"",
+    "test": "./node_modules/.bin/cypress-tags run --browser chrome --headless -e --env TAGS=\"@test\"",
+    "analise": "./node_modules/.bin/cypress-tags run --headed --no-exit --browser chrome -e  --env TAGS=\"@analise\"",
+    "service": "./node_modules/.bin/cypress-tags run --browser chrome -e  --env TAGS=\"@analise\""
   },
   "cypress-cucumber-preprocessor": {
     "step_definitions": "cypress/support/steps"
@@ -14,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^5.0.0",
+    "cypress": "^6.1.0",
     "cypress-cucumber-preprocessor": "^2.5.5",
     "cypress-xpath": "^1.6.0"
   }

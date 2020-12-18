@@ -9,7 +9,7 @@ Feature: Tenant - Acesso ao sistema com diferentes usuários de diferentes acade
 Scenario: Logar no sistema com usuário de um segundo Tenant
     Given que acesso o sistema FitZone
     And informo o login "bruno_@gmail.com"
-    And informo a senha "pass@12345"
+    And informo a senha "11111"
     When clico no botão entrar
     Then acesso a página home do sistema
     When acesso o cadastro de clientes
@@ -21,7 +21,7 @@ Scenario: Logar no sistema com usuário de um segundo Tenant
 Scenario: Realizar checkin no segundo Tenant com usuário do primeiro Tenant
     Given que acesso o sistema FitZone
     And informo o login "bruno_@gmail.com"
-    And informo a senha "pass@12345"
+    And informo a senha "11111"
     When clico no botão entrar
     Then acesso a página home do sistema
     When acesso o cadastro de checkins
@@ -32,7 +32,7 @@ Scenario: Realizar checkin no segundo Tenant com usuário do primeiro Tenant
 Scenario: Realizar checkin usuário válido do segundo Tenant
     Given que acesso o sistema FitZone
     And informo o login "bruno_@gmail.com"
-    And informo a senha "pass@12345"
+    And informo a senha "11111"
     When clico no botão entrar
     Then acesso a página home do sistema
     And acesso o cadastro de checkins

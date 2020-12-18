@@ -1,4 +1,4 @@
-@analise
+@test
 Feature: Serviços Exercícios
 
 Testes dos endpoints do cadastro de exercícios
@@ -49,7 +49,6 @@ Scenario: Atualizar exercício
   And deve apresentar no corpo da requisição o texto "Exercício Atualizado"
   And deve apresentar no corpo da requisição o texto "core"
 
-@ignore
 Scenario: Excluir exercício
   Given acesso a url "http://localhost:8081"
   And informo o endpoint "/exercise/5f39ca48f45fe6b09975981b"

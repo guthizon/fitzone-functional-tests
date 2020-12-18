@@ -1,4 +1,4 @@
-@ignore
+@test
 Feature: Serviços Usuário
 
 Testes dos endpoints do cadastro de usuários
@@ -44,7 +44,7 @@ Scenario: Atualizar usuário
   Given acesso a url "http://localhost:8081"
   And informo o endpoint "/user"
   And informo o valor para o parâmetro "Authorization" "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YzlhZDg0MWMwODFkYTk1MzlmNWRkMTUiLCJuYW1lIjoiTGVvbmFyZG8gVGhpem9uIiwidGVuYW50SWQiOiJ0b2lhIiwicHJvZmlsZSI6IkFETUlOIiwiaWF0IjoxNjA3NjIxOTI0LCJleHAiOjE2MTAwNDExMjR9.czHDLHb7B7VQHZiQSpNqOHNj1iaKxwNhHW2JE6MrhIA" no header da requisição
-  And envio os valores no body da requisição '{"name": "Atualizadoss","_id": "5fdb610911a4e56b5ca45afd"}'
+  And envio os valores no body da requisição '{"name": "Atualizadoss","_id": "5caf118cb891cfdbba3f895b"}'
   When realizo a requisição do tipo PUT
   Then deve retornar o status "200"
   And deve apresentar no corpo da requisição o texto "Atualizadoss"

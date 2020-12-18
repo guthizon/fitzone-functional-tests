@@ -42,7 +42,7 @@ class WorkoutsPage extends WorkoutPageElements {
     }
     
     selecionarTreino(treino) {
-        cy.xpath(this.botaoSelecionarTreino(treino)).should('be.visible').click({force: true});
+        cy.xpath(this.botaoSelecionarTreino(treino)).click({force: true});
     }
 
     treinoCadastradoExibido(treino) {

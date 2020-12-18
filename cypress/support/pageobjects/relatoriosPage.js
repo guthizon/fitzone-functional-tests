@@ -28,7 +28,7 @@ class RelatoriosPage extends RelatoriosPageElements {
     }
 
     clicarAgrupar() {
-        cy.get(this.checkAgrupar()).should('be.visible').click({force: true}).blur();
+        cy.get(this.checkAgrupar()).click({force: true}).blur();
     }
 
     selecionarCliente(cliente) {
