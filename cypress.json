@@ -3,7 +3,6 @@
     "testFiles": "**/*.{feature,features}",
     "projectId": "p9topf",
     "video": false,
-    
     "env": {
         "TAGS": "not @ignore"
     }

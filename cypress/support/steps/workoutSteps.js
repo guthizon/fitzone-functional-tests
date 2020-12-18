@@ -32,11 +32,9 @@ And('clico em copiar treino para outro usuário', () => {
 And('seleciono o usuário {string} para copiar treino', usuario => {
     workoutsPage.selecionarUsuarioCopiarTreino(usuario);
 })
-
-And('o treino deve ser listado na página de treinos do cliente', () => {
-    workoutsPage.treinoCadastradoExibido();
+And('o treino {string} deve ser listado na página de treinos do cliente', treino => {
+    workoutsPage.treinoCadastradoExibido(treino);
 })
-
 Then('deve ser exibida a mensagem de confirmação {string}', mensagem => {
     commons.dialogoConfirmacao(mensagem);
 })
@@ -46,7 +44,6 @@ When('clico no botão sim', () => {
 When('clico no botão excluir treino', () => {
     workoutsPage.clicarBotaoExcluir();
 })
-
 Then('deve apresentar o dashboard de checkins das últimas semanas do cliente com os valores {string}', checkins => {
 
 })

@@ -17,23 +17,23 @@ Feature: Cadastro de Clientes - Workouts
         When acesso o cadastro de clientes
 
     Scenario: Cadastrar treino
-        And clico no botão para abrir os treinos do cliente "leowaterk"
+        And clico no botão para abrir os treinos do cliente "Leonardo"
         And clico no botão adicionar treinos
         And informo os dados do treino
         When adiciono o exercício "Agachamento Aberto" ao treino
         When clico em salvar
         Then deve ser exibida a mensagem "Treino cadastrado"
-        And o treino deve ser listado na página de treinos do cliente
+        And o treino "deadlift automacao" deve ser listado na página de treinos do cliente
 
     Scenario: Alterar treino
-        And clico no botão para abrir os treinos do cliente "leowaterk"
+        And clico no botão para abrir os treinos do cliente "Leonardo"
         And clico no botão editar do treino "teste"
         And altero o nome do treino para "treino alterado"
         When clico em salvar
         Then deve ser exibida a mensagem "Treino alterado com sucesso"
 
     Scenario: Excluir treino
-        And clico no botão para abrir os treinos do cliente "leowaterk"
+        And clico no botão para abrir os treinos do cliente "Leonardo"
         When clico no check selecionar do treino "treino alterado"
         And clico no botão excluir treino
         Then deve ser exibida a mensagem de confirmação "Confirma exclusão"
@@ -41,7 +41,7 @@ Feature: Cadastro de Clientes - Workouts
         Then deve ser exibida a mensagem "Treino(s) excluído(s)"
 
     Scenario: Copiar treino para outro usuário
-        And clico no botão para abrir os treinos do cliente "leowaterk"
+        And clico no botão para abrir os treinos do cliente "Leonardo"
         And seleciono o treino "deadlift automacao"
         And clico em copiar treino para outro usuário
         And seleciono o usuário "Fernanda Silvestre" para copiar treino

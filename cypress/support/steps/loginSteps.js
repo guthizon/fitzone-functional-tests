@@ -23,6 +23,10 @@ Then('acesso a página home do sistema', () => {
     loginPage.acessarPaginaInicial();
 })
 
+Then('acesso a página home do usuario aluno', () => {
+    loginPage.acessarPaginaInicialAluno();
+})
+
 Then('deve exibir a mensagem {string}', mensagem => {
     loginPage.mensagemValidacao(mensagem);
 })
@@ -33,5 +37,8 @@ When('pressiono a tecla Enter para entrar', () => {
 
 And('que eu esteja logado', () => {
     loginPage.realizarLogin();
+})
+When('faço logout', () => {
+    loginPage.realizarLogout();
 })
 

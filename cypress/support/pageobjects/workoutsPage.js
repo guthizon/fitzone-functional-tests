@@ -42,13 +42,11 @@ class WorkoutsPage extends WorkoutPageElements {
     }
     
     selecionarTreino(treino) {
-        cy.xpath(this.botaoSelecionarTreino(treino)).should('be.visible').click({force: true});
+        cy.xpath(this.botaoSelecionarTreino(treino)).click({force: true});
     }
 
-    treinoCadastradoExibido() {
-        cy.fixture('properties').then((treino) => {
-            cy.xpath(this.cardTreinoCliente(treino.treino.nome)).should('be.visible');
-        })
+    treinoCadastradoExibido(treino) {
+        cy.xpath(this.cardTreinoCliente(treino)).should('be.visible').screenshot();
     }
 
     clicarBotaoExcluir() {

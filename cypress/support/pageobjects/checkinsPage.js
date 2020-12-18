@@ -1,11 +1,17 @@
 import CheckinsPageElements from '../elements/checkinsPageElements'
+import HomeElements from '../elements/homePageElements'
 
+const elHome = new HomeElements
 class CheckinsPage extends CheckinsPageElements {
 
     acessarCadastroCheckins(){
-        cy.fixture('properties').then((prop => {
-            cy.visit(`${prop.url}/#/checkin`)
-        }))
+        cy.get(elHome.botaoMenu()).click();
+        cy.xpath(elHome.acessarItemMenuCheckin('Checkin')).click();
+    }
+    
+    acessarCadastroCheckinsAluno(){
+        cy.get(elHome.botaoMenu()).click();
+        cy.xpath(elHome.acessarItemMenuCheckin('Checkin ')).click();
     }
 
     informarCodigoCheckin(codigo) {
